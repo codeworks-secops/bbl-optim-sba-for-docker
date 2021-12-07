@@ -20,4 +20,3 @@ COPY --from=layers application/ .
 
 EXPOSE 9090
 ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
-

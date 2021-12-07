@@ -10,4 +10,3 @@ RUN mvn clean package -DskipTests
 EXPOSE 9090
 
 ENTRYPOINT ["java","-jar","/usr/src/app/target/demo-1.0.0-SNAPSHOT.jar"]
-
