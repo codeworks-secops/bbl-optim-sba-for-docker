@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-demo-sb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-demo-sb
+  template:
+    metadata:
+      labels:
+        app: app-demo-sb
+    spec:
+      containers:
+        - image: elyhamza/perf:v4
+          imagePullPolicy: Always
+          name: app-demo-sb
+          ports:
+            - name: app-demo-sb
+              containerPort: 9090
